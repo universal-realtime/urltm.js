@@ -4,14 +4,14 @@ const source = require('vinyl-source-stream');
 
 // task
 gulp.task('compile', function () {
-    
+
     browserify({
         entries: 'src/index.js',
         debug: true,
-        standalone: 'rltm'
+        standalone: 'urltm'
     })
     .bundle()
-    .pipe(source('rltm.js'))
+    .pipe(source('urltm.js'))
     .pipe(gulp.dest('./web/'));
 
 });

@@ -1,11 +1,12 @@
 {
-  "name": "rltm",
-  "homepage": "https://github.com/pubnub/rltm",
+  "name": "urltm",
+  "homepage": "https://github.com/universal-realtime/urltm.js",
   "authors": [
-    "PubNub"
+    "PubNub",
+    "Ably"
   ],
   "description": "Abstraction for realtime apis",
-  "main": "web/rltm.js",
+  "main": "web/urltm.js",
   "keywords": [
     "realtime",
     "ably",

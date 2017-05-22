@@ -10,7 +10,7 @@ process.on('exit', function () {
     child.kill();
 });
 
-const rltm = require('./src/index');
+const urltm = require('./src/index');
 
 const testMessageData = {
     rand: Math.random()
@@ -27,26 +27,26 @@ const testNewStateData = {
 const connectionInput = process.env.CLIENT || 'pubnub';
 
 const connections = {
-    ably: rltm({
+    ably: urltm({
         service: 'ably',
         config: {
             authUrl: 'https://www.ably.io/ably-auth/token-request/demos?client_id=testSuite'
         }
     }),
-    pubnub: rltm({
-        service: 'pubnub', 
+    pubnub: urltm({
+        service: 'pubnub',
         config: {
             publishKey: 'demo',
             subscribeKey: 'demo'
         }
     }),
-    socketio: rltm({
-        service: 'socketio', 
+    socketio: urltm({
+        service: 'socketio',
         config: {
             endpoint: 'http://localhost:9000',
             uuid: new Date().getTime()
         }
-    })    
+    })
 };
 
 // Room object is shared across the test suite although this is an anti-pattern
@@ -68,7 +68,7 @@ describe(connection.service, function() {
     describe('ready', function() {
 
         it('should get called when ready', function(done) {
-            
+
             this.timeout(5000);
 
             room = connection.join(new Date().getTime(), testStateData);
@@ -192,7 +192,7 @@ describe(connection.service, function() {
 
             async.parallel({
                 one: function(callback) {
-                    
+
                     let input = {room: 1};
                     let room1 = connection.join('room-1');
 

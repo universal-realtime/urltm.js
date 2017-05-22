@@ -1,6 +1,6 @@
 {
-  "name": "rltm",
-  "version": "1.3.1",
+  "name": "urltm",
+  "version": "1.4.0",
   "description": "abstraction for realtime frameworks",
   "main": "src/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pubnub/rltm.js.git"
+    "url": "git+https://github.com/universal-realtime/urltm.js.git"
   },
   "keywords": [
     "realtime",
@@ -20,9 +20,9 @@
   "author": "PubNub",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pubnub/rltm/issues"
+    "url": "https://github.com/universal-realtime/urltm.js/issues"
   },
-  "homepage": "https://github.com/pubnub/rltm#readme",
+  "homepage": "https://universal-realtime.github.io/urltm.js",
   "devDependencies": {
     "async": "^2.1.4",
     "browserify": "^13.1.0",

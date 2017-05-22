@@ -6,27 +6,27 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="rltm.js is an universal API for realtime messaging, allowing you to easily swap between Socket.IO, Ably and PubNub for bidirectional event-based communication.">
-    <meta name="author" content="PubNub">
+    <meta name="description" content="urltm.js is an universal API for realtime messaging, allowing you to easily swap between Socket.IO, Ably and PubNub for bidirectional event-based communication.">
+    <meta name="author" content="Ably,PubNub">
 
-    <title>Rltm.js - Universal API for Realtime</title>
+    <title>urltm.js - Universal API for Realtime</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
     <link href="css/freelancer.min.css" rel="stylesheet">
-    <link href="css/rltm.css" rel="stylesheet">
+    <link href="css/urltm.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <meta property="og:title" content="Rltm.js - Universal API for Realtime"/>
-    <meta property="og:description" content="rltm.js is an universal API for realtime messaging, allowing you to easily swap between Socket.IO, Ably and PubNub for bidirectional event-based communication."/>1
+    <meta property="og:title" content="urltm.js - Universal API for Realtime"/>
+    <meta property="og:description" content="urltm.js is an universal API for realtime messaging, allowing you to easily swap between Socket.IO, Ably and PubNub for bidirectional event-based communication."/>1
     <meta property="og:image" content="assets/publish@2x.png">
-    <meta property="og:url" content="http://rltmjs.com/">
+    <meta property="og:url" content="https://universal-realtime.github.io/urltm.js/">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -59,7 +59,7 @@
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a href="#page-top">
-                    <img src="assets/rltm.js-logo-white.svg" class="img-responsive" style="height: 50px;">
+                    <img src="assets/urltm.js-logo-white.svg" class="img-responsive" style="height: 50px;">
                 </a>
             </div>
 
@@ -79,7 +79,7 @@
                         <a href="#docs">Docs</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="https://github.com/pubnub/rltm.js"><i class="fa fa-github"></i> GitHub</a>
+                        <a href="https://github.com/universal-realtime/urltm.js"><i class="fa fa-github"></i> GitHub</a>
                     </li>
                 </ul>
             </div>
@@ -93,14 +93,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <img src="assets/rltm.js-logo-white.svg" id="main-logo" class="img-responsive">
+                    <img src="assets/urltm.js-logo-white.svg" id="main-logo" class="img-responsive">
                     <div class="intro-text">
                         <hr class="star-light">
                         <span class="name">Universal API for Realtime</span>
                         <span class="skills">Use a single code base to connect to multiple realtime services.</span>
                         <div class="col-sm-8 col-sm-offset-2 text-center">
-                            <a href="https://github.com/pubnub/rltm.js" class="btn btn-lg btn-outline">
-                                <i class="fa fa-github"></i> Get Rltm.js
+                            <a href="https://github.com/universal-realtime/urltm.js" class="btn btn-lg btn-outline">
+                                <i class="fa fa-github"></i> Get urltm.js
                             </a>
                         </div>
                     </div>
@@ -141,31 +141,31 @@
             <div class="row">
                 <div class="col-sm-5 col-sm-offset-1">
                     <p class="text-center">Socket.io</p>
-                    <pre><code class="javascript">let user = rltm({
-    service: 'socketio', 
+                    <pre><code class="javascript">let user = urltm({
+    service: 'socketio',
     config: {
         endpoint: 'http://localhost:8000'
     }
 });</code></pre>
-<p class="dont-forget text-center">Don't forget to run the <a href="https://github.com/pubnub/rltm.js/blob/master/socket.io-server.js">socket.io server</a>.
-                </div>
-                <div class="col-sm-5">
-                    <p class="text-center">PubNub</p>
-                    <pre><code class="javascript">let user = rltm({
-    service: 'pubnub', 
-    config: {
-        publishKey: 'YOUR_PUBNUB_PUBLISH_KEY',
-        subscribeKey: 'YOUR_PUBNUB_SUBSCRIBE_KEY'
-    }
-});</code></pre>
+<p class="dont-forget text-center">Don't forget to run the <a href="https://github.com/universal-realtime/urltm.js/blob/master/socket.io-server.js">socket.io server</a>.
                 </div>
                 <div class="col-sm-5">
                     <p class="text-center">Ably</p>
-                    <pre><code class="javascript">let user = rltm({
+                    <pre><code class="javascript">let user = urltm({
     service: 'ably',
     config: {
         key: 'YOU_ABLY_API_KEY',
         clientId: 'YOUR_UNIQUE_CLIENT_ID_FOR_PRESENCE'
+    }
+});</code></pre>
+                </div>
+                <div class="col-sm-5">
+                    <p class="text-center">PubNub</p>
+                    <pre><code class="javascript">let user = urltm({
+    service: 'pubnub',
+    config: {
+        publishKey: 'YOUR_PUBNUB_PUBLISH_KEY',
+        subscribeKey: 'YOUR_PUBNUB_SUBSCRIBE_KEY'
     }
 });</code></pre>
                 </div>
@@ -202,7 +202,7 @@
                 </div>
                 <div class="col-sm-7">
                     <h1>Users</h1>
-                    <p>Every <code>user</code> connected to rltm.js has two properties:</p>
+                    <p>Every <code>user</code> connected to urltm.js has two properties:</p>
 
                     <ol>
                     <li><code>uuid</code> - a unique way to identify this <code>user</code></li>
@@ -212,8 +212,8 @@
 
                     <p>You can provide these as parameters during initialization.</p>
 
-                    <pre><code>let user = rltm({
-    service: 'socketio', 
+                    <pre><code>let user = urltm({
+    service: 'socketio',
     config: {
         endpoint: 'http://localhost:9000',
         uuid: 'MY_UNIQUE_ID',
@@ -281,20 +281,20 @@
 
                     <p>It will return the last 100 messages as an array of objects containing the <code>uuid</code> and <code>data</code> of every message. The array is sorted newest to oldest.</p>
 
-                    <pre><code class="javascript">[ 
-    { 
-        uuid: uuid2, 
-        data: { 
+                    <pre><code class="javascript">[
+    {
+        uuid: uuid2,
+        data: {
             sentTime: '2pm',
-            text: 'boy howdy' 
-        } 
-    }, 
-    { 
-        uuid: uuid1, 
-        data: { 
+            text: 'boy howdy'
+        }
+    },
+    {
+        uuid: uuid1,
+        data: {
             sentTime: '1pm',
-            text: 'hello there' 
-        } 
+            text: 'hello there'
+        }
     }
 ]</code></pre>
                 </div>
@@ -332,7 +332,7 @@
 
                     <p>Successful responses will return a object of <code>user</code>s who are currently connected to the <code>room</code>. The keys are the <code>user</code>'s <code>uuid</code>s and the values are their current <code>state</code>.</p>
 
-                    <pre><code class="javascript">{ 
+                    <pre><code class="javascript">{
     uuid1: {
         username: 'ianjennings'
     },
@@ -370,39 +370,23 @@
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
-                        <h3>Created By PubNub</h3>
-                        <p>Realtime Apps Made Simple</p>
-                        <p><a href="https://www.pubnub.com/?utm_source=GitHub&utm_medium=rltmjs&utm_campaign=SYN-CY17-Q2-GitHub-April17">PubNub Data Stream Network</a></p>
+                        <h3>Created By PubNub, maintained by Ably for the community</h3>
+                        <p><a href="https://www.ably.io/?utm_source=GitHub&utm_medium=urltmjs&utm_campaign=2017-05-URLTMJS">Ably: simply better realtime</a></p>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
+                        <h3>Ably around the Web</h3>
                         <ul class="list-inline">
                             <li>
-                                <a href="https://www.facebook.com/PubNub/" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                <a href="https://twitter.com/ablyrealtime" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
                             </li>
                             <li>
-                                <a href="https://plus.google.com/+Pubnub" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/PubNub" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/company/pubnub" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/company-beta/2834550/" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>HOT SWAP REALTIME</h3>
                         <p>Easily switch between realtime providers with a single code base.</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        Copyright &copy; PubNub 2017
                     </div>
                 </div>
             </div>

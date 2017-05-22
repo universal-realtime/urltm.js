@@ -1,12 +1,12 @@
-![](./assets/rltm.js-logo.png)
+![](./assets/urltm.js-logo.png)
 
-Universal API for realtime services. Integrate once and easily switch between Socket.io, PubNub and Ably.
+Universal API for realtime services. Integrate once and easily switch between Socket.io, Ably and PubNub.
 
 Provides handy methods for rooms, users, message history, and information about connected user.
 
 Supported realtime services:
 
-![](./assets/ably.png)
+![https://www.ably.io/](./assets/ably.png)
 
 ![](./assets/socketio.png)
 
@@ -19,13 +19,13 @@ Supported realtime services:
 Install via NPM.
 
 ```sh
-npm install rltm --save
+npm install urltm --save
 ```
 
 Include library via require.
 
 ```js
-const rltm = require('rltm');
+const urltm = require('urltm');
 ```
 
 ## Web
@@ -33,22 +33,22 @@ const rltm = require('rltm');
 Install via bower or NPM
 
 ```sh
-npm install rltm --save
-bower install rltm --save
+npm install urltm --save
+bower install urltm --save
 ```
 
 Include library in HTML.
 
 ```html
-<script src="./bower_components/web/rltm.js"></script>
+<script src="./bower_components/web/urltm.js"></script>
 ```
 
 # Configure
 
-Both the NodeJS and web libraries are configured with the ```rltm``` variable.
+Both the NodeJS and web libraries are configured with the ```urltm``` variable.
 
 ```js
-let user = rltm({
+let user = urltm({
     service: 'pubnub',
     config: {
         // ...
@@ -78,7 +78,7 @@ Ably  is a hosted realtime solution that doesn't require you to run or maintain 
 
 ## Users
 
-Every ```user``` connected to rltm.js has two properties:
+Every ```user``` connected to urltm.js has two properties:
 
 1. ```uuid``` - a unique way to identify this ```user```
 1. ```state``` - data associated with this ```user```
@@ -86,7 +86,7 @@ Every ```user``` connected to rltm.js has two properties:
 You can provide these as parameters during initialization.
 
 ```js
-let user = rltm({
+let user = urltm({
     service: 'socketio',
     config: {
         endpoint: 'http://localhost:9000',

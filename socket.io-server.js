@@ -50,10 +50,10 @@ const saveHistory = function(channel, uuid, data) {
 
 let socketChannels = {};
 
-// when a new rltm.js user connects
+// when a new urltm.js user connects
 io.on('connection', function (socket) {
-  
-  // when the user calls rltm.join() this is called
+
+  // when the user calls urltm.join() this is called
   socket.on('channel', function (channel, uuid, state) {
 
     // have the socket join the channel
@@ -107,11 +107,11 @@ io.on('connection', function (socket) {
     if(!states[channel]) {
       fn({});
     } else {
-      fn(states[channel]); 
+      fn(states[channel]);
     }
 
   });
-  
+
   // user wants the history for this channel
   socket.on('history', function (channel, fn) {
 
@@ -119,7 +119,7 @@ io.on('connection', function (socket) {
     if(!history[channel]) {
       fn([]);
     } else {
-      fn(history[channel]); 
+      fn(history[channel]);
     }
 
   });
@@ -140,7 +140,7 @@ io.on('connection', function (socket) {
   socket.on('disconnect', function() {
 
     socketChannels[socket.id].forEach(function(data) {
-    
+
       if (states[data.channel] && states[data.channel][data.uuid]) {
         delete states[data.channel][data.uuid];
       }
@@ -153,4 +153,4 @@ io.on('connection', function (socket) {
 
 });
 
-console.log('rltm.js - socket.io server running on port', port)
+console.log('urltm.js - socket.io server running on port', port)
