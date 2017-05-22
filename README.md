@@ -1,6 +1,6 @@
 ![](./assets/urltm.js-logo.png)
 
-Universal API for realtime services. Integrate once and easily switch between Socket.io, Ably and PubNub.
+Universal API for realtime services. Integrate once and easily switch between Socket.io, Ably and PubNub. We hope to add support for more realtime services and platforms in future.
 
 Provides handy methods for rooms, users, message history, and information about connected user.
 
@@ -11,6 +11,10 @@ Supported realtime services:
 ![](./assets/socketio.png)
 
 ![](./assets/pubnub.png)
+
+## Background
+
+This project was initially created by PubNub. However, due to a licensing constraint added by PubNub prohibiting the universal API supporting any commercial realtime projects, this project was forked and adopts the original Mozilla free and open source license. Read [the blog post about the launch of urltm.js](https://blog.ably.io/relaunching-the-universal-api-for-realtime-ab36ed749378)
 
 # Setup
 
